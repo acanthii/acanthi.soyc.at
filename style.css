@@ -1,6 +1,5 @@
 html {
-	cursor: url('cursor.png'), auto;
-	height: 100%;
+	cursor: url("cursor.png"), auto;
 }
 
 body {
@@ -13,10 +12,27 @@ body {
     font-family: kaiti;
 }
 
-.soycat {
+html,body {
+	padding: 0px;
+	margin: 0px;
+	min-height: 100vh;
+	min-width: 100vw;
 	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+a {
+  color: #f7ff01;
+  font-style: italic;
+}
+
+.soycat {
+	position: fixed;
 	right: 10px;
 	bottom: 10px;
+	z-index: 9999;
+	margin: 0;
 }
 
 .img {
@@ -31,10 +47,9 @@ body {
 }
 
 .container {
-  height: 100%;
   padding: 0 1em 1em;
   box-sizing: border-box;
-  margin-right: auto;
+  margin: auto;
   width: 800px;
 }
 
@@ -42,7 +57,7 @@ body {
 	box-sizing: border-box;
 	padding: 0 15px 10px;
 	width: 800px;
-	margin-right: auto;
+	margin: auto;
 }
 
 .columns {
@@ -60,12 +75,30 @@ body {
   background-color: black;
 }
 
+.atabook {
+	overflow: none;
+	overflow-y: scroll;
+	height: 460px;
+	width: 100%;
+}
+
+.flexbox {
+	display:flex-inline;
+	text-align:justify;  
+    text-justify:inter-word;
+}
+.flexbox p {
+	display: inline;
+}
+
 h1 {
   color: white;
-  margin: 3px;
+  margin-top: -3px;
+  margin-left: -3px;
+  margin-right: -3px;
   text-align: center;
   font-size: 15px;
-  background: linear-gradient(180deg, #b01d3b, #640e0e);
+  background: linear-gradient(90deg, #b01d3b, #640e0e);
 }
 
 p {
