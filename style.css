@@ -1,0 +1,126 @@
+html {
+	cursor: url('cursor.png'), auto;
+	height: 100%;
+}
+
+body {
+	background-color: #000000;
+	background-image: url("starsdark.gif");
+	background-attachment: scroll;
+	color: #ffffff;
+	font: 15px sans-serif;
+    font-size: 15px;
+    font-family: kaiti;
+}
+
+.soycat {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+
+.img {
+	max-width: 100%;
+}
+
+.banner {
+	text-align: center;
+	font-size: 32px;
+	font-family: pixeloperator;
+	padding: 10px;
+}
+
+.container {
+  height: 100%;
+  padding: 0 1em 1em;
+  box-sizing: border-box;
+  margin-right: auto;
+  width: 800px;
+}
+
+.header{
+	box-sizing: border-box;
+	padding: 0 15px 10px;
+	width: 800px;
+	margin-right: auto;
+}
+
+.columns {
+  display: grid;
+  grid-column-gap: 1em;
+  grid-template-columns: 292px auto;
+  width: 100%;
+}
+
+.box {
+  border: #ffffff 3px outset;
+  margin: 10px 0;
+  padding: 3px;
+  overflow-y: scroll;
+  background-color: black;
+}
+
+h1 {
+  color: white;
+  margin: 3px;
+  text-align: center;
+  font-size: 15px;
+  background: linear-gradient(180deg, #b01d3b, #640e0e);
+}
+
+p {
+  margin: 3px;
+}
+
+table {
+  width: 100%;
+}
+
+.wave span {
+  transform: translateY(-5px);
+  display: table-cell;
+  animation: wave 1.5s infinite ease-in-out;
+  animation-delay: 0s;
+  position: relative;
+}
+
+@keyframes wave {
+	0%{transform:translateY(-5px);}
+	50%{transform:translateY(5px);}
+	100%{transform:translateY(-5px);}
+}
+
+.wave span:nth-child(1) {
+	animation-delay:0s;
+}
+.wave span:nth-child(2) {
+	animation-delay:0.05s;
+}
+.wave span:nth-child(3) {
+	animation-delay:0.1s;
+}
+.wave span:nth-child(4) {
+	animation-delay:0.15s;
+}
+.wave span:nth-child(5) {
+	animation-delay:0.2s;
+}
+.wave span:nth-child(6) {
+	animation-delay:0.25s;
+}
+.wave span:nth-child(7) {
+	animation-delay:0.3s;
+}
+
+
+@media (max-width: 865px) {
+	.container, .navbar, .footer, .header {width: 100%;}
+	.columns {grid-template-columns: 100%;}
+	.box {margin: 1em 0;}
+	.box:last-child {margin: 0;};
+}
+
+@font-face {
+  font-family: pixeloperator;
+  src: url("fonts/PixelOperator-Bold.ttf");
+}
