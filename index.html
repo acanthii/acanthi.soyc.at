@@ -28,14 +28,14 @@
 		
 		<!-- blog -->
 		<script>
-			fetch("./posts/.index.json")
-			.then(r => r.json())
+			fetch("https://raw.githubusercontent.com/acanthii/acanthi.soyc.at/refs/heads/main/posts/.index.json")
+			.then(toJson => toJson.json())
 			.then(posts => {
 				const blog = document.getElementById("blog");
 
 				posts.forEach(post => {
-					fetch(`./posts/${post}`)
-						.then(r => r.text())
+					fetch(`https://raw.githubusercontent.com/acanthii/acanthi.soyc.at/refs/heads/main/posts/${post}`)
+						.then(toText => toText.text())
 						.then(html => {
 							const div = document.createElement("div");
 							div.innerHTML = html;
