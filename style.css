@@ -4,7 +4,7 @@ html {
 
 body {
 	background-color: #000000;
-	background-image: url("starsdark.gif");
+	background-image: url("bg.jpg");
 	background-attachment: scroll;
 	color: #ffffff;
 	font: 15px sans-serif;
@@ -76,19 +76,18 @@ a {
 }
 
 .atabook {
-	overflow: none;
+	overflow-x: hidden;
 	overflow-y: scroll;
 	height: 460px;
 	width: 100%;
+	box-sizing: border-box;
 }
 
 .flexbox {
-	display:flex-inline;
-	text-align:justify;  
-    text-justify:inter-word;
-}
-.flexbox p {
-	display: inline;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	width: 100%;
 }
 
 h1 {
@@ -96,9 +95,13 @@ h1 {
   margin-top: -3px;
   margin-left: -3px;
   margin-right: -3px;
-  text-align: center;
+  text-align: left;
+  padding-left: 3px;
   font-size: 15px;
-  background: linear-gradient(90deg, #b01d3b, #640e0e);
+  background: url("hdrnew.png"), linear-gradient(90deg, #739a8b, #dddddd);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
 }
 
 p {
