@@ -1,3 +1,10 @@
+:root {
+    --accent-light: #bfe0d4;
+    --accent: #749b8c;
+    --accent-strong: #5a9981;
+	--accent-dark: #7d3140;
+}
+
 html {
 	cursor: url("cursor.png"), auto;
 }
@@ -25,6 +32,27 @@ html,body {
 a {
   color: #f7ff01;
   font-style: italic;
+}
+
+.collapse {
+	margin: 3px;
+	color: white;
+	text-align: left;
+	padding-left: 3px;
+	font-size: 15px;
+	background: linear-gradient(90deg, var(--accent-dark), #000);
+}
+
+.collapsedetails {
+  border-image: linear-gradient(90deg, var(--accent-dark), #000) 1;
+  border-radius: 0px;
+  border-width: 3px;
+  border-style: solid;
+  margin: 3px;
+}
+
+.status {
+	color: var(--accent-light);
 }
 
 .soycat {
@@ -67,12 +95,16 @@ a {
   width: 100%;
 }
 
-.box {
+.box, .blog {
   border: #ffffff 3px outset;
   margin: 10px 0;
   padding: 3px;
   overflow-y: scroll;
   background-color: black;
+}
+
+.blog {
+	max-height: 400px;
 }
 
 .atabook {
@@ -98,10 +130,21 @@ h1 {
   text-align: left;
   padding-left: 3px;
   font-size: 15px;
-  background: url("hdrnew.png"), linear-gradient(90deg, #739a8b, #dddddd);
+  background: url("hdrnew.png"), linear-gradient(90deg, var(--accent), #dddddd);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
+}
+
+h2 {
+  color: white;
+  margin-top: -3px;
+  margin-left: -3px;
+  margin-right: -3px;
+  text-align: left;
+  padding-left: 3px;
+  font-size: 15px;
+  background: linear-gradient(90deg, var(--accent-dark), #000);
 }
 
 p {
@@ -159,4 +202,16 @@ table {
 @font-face {
   font-family: pixeloperator;
   src: url("fonts/PixelOperator-Bold.ttf");
+}
+
+::-moz-selection {
+    background: var(--accent-strong);
+    color: #eeeeee;
+    text-shadow: none;
+}
+
+::selection {
+    background: var(--accent-strong);
+    color: #eeeeee;
+    text-shadow: none;
 }

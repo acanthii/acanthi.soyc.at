@@ -26,6 +26,25 @@
 		  new ghostCursor({image:"https://acanthi.soyc.at/cursor.png"});
 		</script>
 		
+		<!-- blog -->
+		<script>
+			fetch("./posts/.index.json")
+			.then(r => r.json())
+			.then(posts => {
+				const blog = document.getElementById("blog");
+
+				posts.forEach(post => {
+					fetch(`./posts/${post}`)
+						.then(r => r.text())
+						.then(html => {
+							const div = document.createElement("div");
+							div.innerHTML = html;
+							blog.appendChild(div);
+						});
+				});
+			});
+		</script>
+		
 		<script type="text/javascript">
 			// <![CDATA[
 			var speed=1; // lower number for faster
@@ -161,7 +180,7 @@
 					</span>
 				</div>
 				<!--Status!-->
-				<marquee>collecting kitty orbs increases your meow score !!</marquee>
+				<marquee class="status">collecting kitty orbs increases your meow score !!</marquee>
 			</div>
 		</div>
 		
@@ -205,12 +224,37 @@
 						<h1>grahhh go look at these NOW !!,!</h1>
 						<div class="flexbox">
 							<a href="https://icebro.party/">icebro.party</a>
+							<a href="https://thunderstore.io/package/acanthic/">my ror2 mods,.,</a>
 							<a href="https://media.discordapp.net/attachments/375753810246631448/1026397451889938432/videoplayback.mp4?ex=6a23255e&is=6a21d3de&hm=6439489733fcfa1a646eea7a6a7797bec5befc3b676c0e7448e4b8ac9c7a9928&">scary ghost.,,.</a>
 						</div>
 					</div>
 					<div class="box">
 						<h1>featured song ., ,.!</h1>
 						<iframe width="100%" src="https://www.youtube-nocookie.com/embed/FCCq7PYrr4Q?si=VRgfnbGCYA8d9NoF&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+					</div>
+					
+					<div class="box">
+						<h1>about me !!!</h1>
+						<p>a bit of an internet wanderer !! you might see me around vrchat or the risk of rain 2 community.,,.</p>
+						<p>i like to program in my free time ! my goal is to become a game developer ,.,.</p>
+						<p>i do sillies !!!</p>
+						
+						<details>
+						  <summary class="collapse">fandoms,.. (click to open!)</summary>
+						  <div class="collapsedetails">
+							  <p>> risk of rain !</p>
+							  <p>> slayings the spire,.,.</p>
+							  <p>> omori</p>
+							  <p>> yume nikki !</p>
+							  <p>> persona 5 royal</p>
+							  <p>> serial experiments lain (obviously,.,.)</p>
+							  <p>> deltarune / undertale</p>
+							  <p>> zelda (modern/majora's mask)</p>
+							  <p>> boneworks !!</p>
+							  <p>> cyberpunk 2077,.</p>
+							  <p>> nintendo !! (tomodach life,.. mario,., pokemon,..)</p>
+						  </div>
+						</details>
 					</div>
 				</div>
 				
@@ -220,8 +264,8 @@
 						<img class="img" src="lain.gif">
 					</div>
 					
-					<div class="box">
-						PAGE IS WIP!
+					<div id="blog" class="blog">
+						<h1>blog thing !</h1>
 					</div>
 					
 					<div class="box">
