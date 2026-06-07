@@ -29,7 +29,7 @@
 		
 		<!-- blog -->
 		<script>
-			fetch("/posts/.index.json")
+			fetch("/posts/index.json")
 			.then(toJson => toJson.json())
 			.then(posts => {
 				const blog = document.getElementById("blog");
